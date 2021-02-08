@@ -1,0 +1,14 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: cloud-order-service
+
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+
+eureka:
+  client:
+    register-with-eureka: true
+    service-url: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
