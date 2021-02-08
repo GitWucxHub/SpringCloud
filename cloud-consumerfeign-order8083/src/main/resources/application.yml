@@ -17,3 +17,16 @@ eureka:
   instance:
     instance-id: order8083
     prefer-ip-address: true
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+
+
+logging:
+  level:
+    #feign\u65E5\u5FD7\u4EE5\u4EC0\u4E48\u7EA7\u522B\u76D1\u63A7\u54EA\u4E2A\u63A5\u53E3
+    com.alphago.springcloud.service.PaymentFeignService: debug
