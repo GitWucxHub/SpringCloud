@@ -1,0 +1,24 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: cloud-order-service
+
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+
+eureka:
+  client:
+
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:7000/eureka
+      #defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+  instance:
+    instance-id: order8085
+    prefer-ip-address: true
+
+feign:
+  hystrix:
+    enabled: true
