@@ -1,0 +1,19 @@
+server:
+  port: 9001
+
+
+spring:
+  application:
+    name: nacos-payment-provider
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.0.112:8848
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

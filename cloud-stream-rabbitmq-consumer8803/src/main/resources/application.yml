@@ -1,0 +1,44 @@
+
+
+server:
+  port: 8803
+
+
+
+spring:
+  application:
+    name: cloud-stream-consumer
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  cloud:
+    stream:
+      binders:
+        defaultRabbit:
+          type: rabbit
+          emviroment:
+            spring:
+              rabbitmq:
+                host: localhost
+                port: 5672
+                username: guest
+                password: guest
+      bindings:
+        input:
+          destination: studyExchange
+          content-type: application/json
+          binder: defaultRabbit
+          group: alphagoA
+
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:7000/eureka
+  instance:
+    instance-id: cloud-stream-consumer8803
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 2
+    lease-expiration-duration-in-seconds: 5

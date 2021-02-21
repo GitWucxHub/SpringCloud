@@ -8,23 +8,12 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>cloud-consumer-order8080</artifactId>
+    <artifactId>cloud-stream-rabbitmq-consumer8802</artifactId>
 
-    <name>cloud-consumer-order8080</name>
+    <name>cloud-stream-rabbitmq-consumer8802</name>
     <description>Demo project for Spring Boot</description>
 
     <dependencies>
-        <!--        包含了sleuth和zipkin-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zipkin</artifactId>
-            <version>2.2.7.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>com.alphago.springcloud</groupId>
-            <artifactId>cloud-api-commons</artifactId>
-            <version>${project.version}</version>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -56,6 +45,11 @@
             <version>2.2.5.RELEASE</version>
         </dependency>
         <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-stream-rabbit</artifactId>
+            <version>3.0.10.RELEASE</version>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
@@ -67,6 +61,7 @@
             </exclusions>
         </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
@@ -75,4 +70,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
