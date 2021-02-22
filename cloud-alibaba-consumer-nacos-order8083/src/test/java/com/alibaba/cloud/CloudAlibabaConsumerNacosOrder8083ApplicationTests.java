@@ -1,10 +1,10 @@
-package com.alphago.springcloud;
+package com.alibaba.cloud;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CloudalibabaProviderPayment9001ApplicationTests {
+class CloudAlibabaConsumerNacosOrder8083ApplicationTests {
 
     @Test
     void contextLoads() {
